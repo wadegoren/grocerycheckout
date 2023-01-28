@@ -76,11 +76,11 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <div className="header">Header</div>
+      <div className="header">Grocery Checkout</div>
     
       {/* <Link to="/calendar" className="btn btn-primary" style={linkStyle}>  */}
         {/* <button className="panel2" >Panel 4</button> */}
-        <div>
+        <div class='width'>
     <Modal className="myModal" overlayClassName="Overlay" isOpen={isOpen} onRequestClose={toggleModal} contentLabel="Add new Item">
       <p class ="Text">Enter Product Name:</p>
         <input class="inputBox" placeholder="Product" value={eventName} onChange={(e) => setEventName(e.target.value)} onBlur={validate}  /><br></br><br></br>
@@ -124,7 +124,7 @@ function Dashboard() {
       </ul>
         </div>
         <div className="panel1">Panel 2</div>
-        <div className="panel1">Panel 3</div>
+        <div className="panel4">Panel 3</div>
       </div>
     </div>
   );
