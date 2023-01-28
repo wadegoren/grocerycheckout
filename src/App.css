@@ -38,7 +38,7 @@
   overflow: auto;
   border-radius: 6px;
   outline: none;
-  padding: 200px;
+  padding: 180px;
   
 }
 
@@ -53,9 +53,43 @@
 } 
 
 .inputBox {
+  border-radius: 3px;
+  width: 400px;
+  height: 100px;
+  font-size: xx-large;
+  overflow: auto;
+}
+
+.Text {
+  font-size: xx-large;
+  font-weight: bold;
   
 }
 
+.SubmitButton {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.SubmitButton:hover {
+  background-color: darkblue;
+}
+
+.remove-event {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
 
 
 
