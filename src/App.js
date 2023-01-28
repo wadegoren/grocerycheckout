@@ -49,11 +49,16 @@ function App() {
     console.log(event);
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = "Delete";
+    deleteButton.classList.add("delete-button");
     deleteButton.addEventListener("click", () => {
       const updatedEvents = events.filter(e => e.title !== event.event.title && e.start !== event.event.start);
       setEvents(updatedEvents);
     });
     event.el.appendChild(deleteButton);
+  }
+
+  function eventRender(info) {
+    info.el.style.height = "100px";
   }
 
   return (
@@ -74,6 +79,9 @@ function App() {
         events={events}
         initialView = 'dayGridWeek'
         eventClick={handleEventClick}
+        eventClassNames={(event) => {
+          return "my-event-height";
+        }}
         dateClick={(e) => {
           setEventDate(e.dateStr);
           toggleModal();

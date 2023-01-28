@@ -38,7 +38,7 @@
   overflow: auto;
   border-radius: 6px;
   outline: none;
-  padding: 180px;
+  padding: 50px;
   
 }
 
@@ -90,6 +90,24 @@
   top: 5px;
   cursor: pointer;
 }
+
+.my-event-height {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  word-wrap: break-word;
+  overflow: hidden;
+  display:inline-block;
+  width:100%;
+}
+
+.delete-button {
+ line-height: 60px;
+ text-align: center;
+}
+
 
 
 
