@@ -1,38 +1,216 @@
+
+.App {
+  background-color: white;
+}
+
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+}
+
+.Auth-form {
+  width: 420px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.Auth-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header{
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(108, 72, 72);
+  color: #fff;
+}
+
+.header {
+  flex: 0 0 50px;
+}
+
+.panels1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.panel1 {
+  width: calc(28% - 40px);
+  height: 190px;
+  margin-top: 10px;
+  background-color: #53646d;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  box-shadow: 0 0 10px #333;
+  border-radius: 10px;
+}
+
+.panel2 {
+  width: calc(50% - 40px);
+  position:absolute;
+  bottom:0px;
+  height: 400px;
+  margin: 40px;
+  background-color: #53646d;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  box-shadow: 0 0 10px #333;
+  border-radius: 10px;
+}
+
+
 .App {
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.addButton {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addButton:hover {
+  background-color: darkblue;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff00;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+
+.myModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  border-radius: 6px;
+  outline: none;
+  padding: 50px;
+  
+}
+
+.Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(101, 90, 90, 0.75);
+  opacity: 1;
+} 
+
+.inputBox {
+  border-radius: 3px;
+  width: 400px;
+  height: 100px;
+  font-size: xx-large;
+  overflow: auto;
+}
+
+.Text {
+  font-size: xx-large;
+  font-weight: bold;
+  
+}
+
+.SubmitButton {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: blue;
   color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.SubmitButton:hover {
+  background-color: darkblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.remove-event {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
 }
+
+.my-event-height {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  word-wrap: break-word;
+  overflow: hidden;
+  display:inline-block;
+  width:100%;
+}
+
+.delete-button {
+ line-height: 8px;
+ text-align: center;
+ background-color: rgb(255, 0, 0);
+ color: white;
+ padding: 10px 10px;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 8px;
+
+}
+
+.delete-button:hover {
+  background-color: darkblue;
+  
+}
+
+
+
