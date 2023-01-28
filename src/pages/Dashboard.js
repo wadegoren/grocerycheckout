@@ -7,7 +7,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import moment from 'moment';
 
 const linkStyle = {
-  width: '49%',
+  width: '60%',
   // position: 'absolute',
   bottom: '0px',
   height: '100%',
@@ -77,12 +77,8 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <div className="header">Header</div>
-      <div className="panels1">
-        <div className="panel1">Panel 1</div>
-        <div className="panel1">Panel 2</div>
-        <div className="panel1">Panel 3</div>
-      </div>
-      <Link to="/calendar" className="btn btn-primary" style={linkStyle}> 
+    
+      {/* <Link to="/calendar" className="btn btn-primary" style={linkStyle}>  */}
         {/* <button className="panel2" >Panel 4</button> */}
         <div>
     <Modal className="myModal" overlayClassName="Overlay" isOpen={isOpen} onRequestClose={toggleModal} contentLabel="Add new Item">
@@ -95,7 +91,8 @@ function Dashboard() {
         </Modal>
       <div hidden={isEditable}>
         <FullCalendar
-        contentHeight={400}
+        style={linkStyle}
+        contentHeight={300}
         plugins={[dayGridPlugin, interactionPlugin]}
         events={events}
         initialView = 'dayGridWeek'
@@ -113,11 +110,22 @@ function Dashboard() {
           <li key={index}>{event.title} on {event.start}</li>
         ))}
       </ul>
-      {/* <button  class= "addButton" variant="outlined" color="primary" onClick={toggleModal}>Add Item</button>   */}
+      <button  class= "addButton" variant="outlined" color="primary" onClick={toggleModal}>Add Item</button>  
       </div>
     </div>
-      </Link>
-        <div className="panel3">Panel 5</div>
+      {/* </Link>ç */}
+        {/* <div className="panel3">Panel 5</div> */}
+      <div className="panels1">
+        <div className="panel1">
+        <ul>
+        {events.map((event, index) => (
+          <li key={index}>{event.title} on {event.start}</li>
+        ))}
+      </ul>
+        </div>
+        <div className="panel1">Panel 2</div>
+        <div className="panel1">Panel 3</div>
+      </div>
     </div>
   );
 }
