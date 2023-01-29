@@ -105,26 +105,31 @@ function Dashboard() {
           toggleModal();
         }}
       />
-      <ul>
+      {/* <ul>
         {events.map((event, index) => (
           <li key={index}>{event.title} on {event.start}</li>
         ))}
-      </ul>
+      </ul> */}
       <button  class= "addButton" variant="outlined" color="primary" onClick={toggleModal}>Add Item</button>  
       </div>
     </div>
-      {/* </Link>ç */}
+      {/* </Link> */}
         {/* <div className="panel3">Panel 5</div> */}
       <div className="panels1">
         <div className="panel1">
-        <ul>
+          <h6 class='head6'>Already Expired Items</h6>
         {events.map((event, index) => (
-          <li key={index}>{event.title} on {event.start}</li>
+          <p class='innerText' key={index}>{event.title} on {event.start}</p>
         ))}
-      </ul>
         </div>
-        <div className="panel1">Panel 2</div>
-        <div className="panel4">Panel 3</div>
+        <div className="panel1">
+          <h6 class='head7'>Expires Today</h6>
+          {events.map((event, index) => (
+          <p class='innerText' key={index}>{event.title} on {event.start}</p>
+        ))}        </div>
+        <div className="panel4">
+        <h6 class='head8'>Suggested Recipes</h6>
+        </div>
       </div>
     </div>
   );
