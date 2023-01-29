@@ -1,6 +1,5 @@
-
 .App {
-  background-color: white;
+  background-color: #f8f5f2;
 }
 
 .Auth-form-container {
@@ -52,7 +51,7 @@ label {
   font-size:30px;
   font-weight: 500;
   text-align: center;
-  background-color: rgb(108, 72, 72);
+  background: #55423d;
   color: #fff;
 }
 
@@ -64,6 +63,15 @@ label {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  border-color: #0e172c;
+  border-width: 10px;
+}
+
+.innerText{
+  margin-top:0%;
+  font-weight:400;
+  color:red;
+  line-height: normal;
 }
 
 .panel1 {
@@ -71,10 +79,27 @@ label {
   font-family: 'Courier New', monospace;
   height: 190px;
   margin-top: 10px;
-  background-color: #53646d;
+  background-color: #004643;
   text-align: center;
   line-height: 200px;
   color: #fff;
+  border-color: #0e172c;
+  border-width: 10px;
+  box-shadow: 0 0 10px #333;
+  border-radius: 10px;
+}
+
+.panel5 {
+  width: calc(28% - 40px);
+  font-family: 'Courier New', monospace;
+  height: 190px;
+  margin-top: 10%;
+  background-color: #004643;
+  text-align: center;
+  line-height: 200px;
+  color: red;
+  border-color: #0e172c;
+  border-width: 10px;
   box-shadow: 0 0 10px #333;
   border-radius: 10px;
 }
@@ -82,10 +107,12 @@ label {
 .panel4 {
   width: calc(28% - 40px);
   margin-top: -26%;
+  border-color: #0e172c;
+  border-width: 10px;
   font-family: 'Courier New', monospace;
   height: 575px;
   /* margin-top: 10px; */
-  background-color: #53646d;
+  background-color: #004643;
   text-align: center;
   line-height: 200px;
   color: #fff;
@@ -100,7 +127,7 @@ label {
   bottom:0px;
   height: 400px;
   margin: 40px;
-  background-color: #53646d;
+  background-color: #64b35d;
   text-align: center;
   line-height: 200px;
   color: #fff;
@@ -117,7 +144,7 @@ label {
   bottom:0px;
   /* height: 400px; */
   margin: 40px;
-  background-color: #53646d;
+  background-color: #64b35d;
   text-align: center;
   line-height: 200px;
   color: #fff;
@@ -132,8 +159,9 @@ label {
 }
 
 .addButton {
-  background-color: blue;
+  background-color: #55423d;
   color: white;
+  font-weight: 500;
   padding: 10px 20px;
   font-family: 'Courier New', monospace;
   border-radius: 5px;
@@ -142,11 +170,11 @@ label {
 }
 
 .addButton:hover {
-  background-color: darkblue;
+  background-color: #7d5f57;
 }
 
 .App-header {
-  background-color: #ffffff00;
+  background-color: #232323;
   min-height: 100vh;
   font-family: 'Courier New', monospace;
   display: flex;
@@ -192,8 +220,31 @@ label {
   overflow: auto;
 }
 
+.head6{
+  font-size:24px;
+  text-decoration: underline;
+  padding-top: 15px;
+  font-weight:400;
+}
+
+.head7{
+  font-size:26px;
+  text-decoration: underline;
+  padding-top: 15px;
+  font-weight:400;
+}
+
+.head8{
+  font-size:26px;
+  padding-top: 15px;
+  text-decoration: underline;
+  font-weight:400;
+}
+
 .width{
   width:60%;
+  margin-top:15px;
+  margin-left: 60px;
 }
 
 .Text {
