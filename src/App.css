@@ -265,7 +265,7 @@ label {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-
+  bottom: 0;
 }
 
 .SubmitButton:hover {
@@ -310,3 +310,7 @@ label {
   
 }
 
+.redtext {
+  font-weight: bold ;
+  color: crimson;
+}

@@ -30,7 +30,9 @@ function Dashboard() {
   const [isEditable, setEditable] = React.useState(false);
   const [isValid, setIsValid] = React.useState(true);
   let currDate = new Date();
+  const [isValidDate, setIsValidDate] = React.useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+
   
   const handleEventSubmit = () => {
     toggleModal();
@@ -39,6 +41,7 @@ function Dashboard() {
       setEventName('');
       setEventDate('');
       setIsValid(true);
+      
     }
   }
 
@@ -51,10 +54,15 @@ function Dashboard() {
     // code to validate date and string inputs
     let itemDate = moment(eventDate).toDate();
     itemDate.setHours(23,59,59,999);
-    if (eventDate !== '' && eventName !== '' && (itemDate >= currDate)){
+    if (eventDate !== '' && eventName !== '' && itemDate > currDate){
       setIsValid(false);
+      setIsValidDate(false);
     } else {
       setIsValid(true);
+    }
+    if(itemDate < currDate){
+      setIsValidDate(true);
+      setIsValid(false);
     }
   }
 
@@ -87,7 +95,7 @@ function Dashboard() {
       <p class="Text">Enter Expiry Date:</p>
         <input class="inputBox" placeholder="Expiry Date" value={eventDate} onChange={(e) => setEventDate(e.target.value)} type="date" onBlur={validate}  /><br></br>
         <button class="SubmitButton" hidden={isValid} onClick={handleEventSubmit}>Add Event</button>
-        <p hidden={!isValid} >Please Enter a valid Name and Date</p>
+        <p hidden={!isValidDate} class="redtext">Note: Your Product is expired!</p>
         </Modal>
       <div hidden={isEditable}>
         <FullCalendar
@@ -116,17 +124,22 @@ function Dashboard() {
       {/* </Link> */}
         {/* <div className="panel3">Panel 5</div> */}
       <div className="panels1">
-        <div className="panel1">
+      <div className="panel1">
           <h6 class='head6'>Already Expired Items</h6>
-        {events.map((event, index) => (
-          <p class='innerText' key={index}>{event.title} on {event.start}</p>
-        ))}
-        </div>
-        <div className="panel1">
+        {events
+           .filter(event => moment(event.start).startOf('day') < moment(new Date()).startOf('day'))
+          .map((event, index) => (
+            <p class='innerText' key={index}>{event.title} on {event.start}</p>
+          ))}
+</div>
+<div className="panel1">
           <h6 class='head7'>Expires Today</h6>
-          {events.map((event, index) => (
-          <p class='innerText' key={index}>{event.title} on {event.start}</p>
-        ))}        </div>
+          {events
+            .filter(event => moment(event.start).toDate().toDateString() === new Date().toDateString())
+            .map((event, index) => (
+              <p class='innerText' key={index}>{event.title}</p>
+            ))}
+        </div>
         <div className="panel4">
         <h6 class='head8'>Suggested Recipes</h6>
         </div>
@@ -134,5 +147,6 @@ function Dashboard() {
     </div>
   );
 }
-
+// let itemDate = moment(eventDate).toDate();
+// itemDate.setHours(23,59,59,999);
 export default Dashboard;
