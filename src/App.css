@@ -70,8 +70,12 @@ label {
 .innerText{
   margin-top:0%;
   font-weight:400;
-  color:red;
+  color:white;
   line-height: normal;
+}
+
+.list{
+  margin-top:24px;
 }
 
 .panel1 {
@@ -97,7 +101,7 @@ label {
   background-color: #004643;
   text-align: center;
   line-height: 200px;
-  color: red;
+  color: white;
   border-color: #0e172c;
   border-width: 10px;
   box-shadow: 0 0 10px #333;
@@ -106,7 +110,7 @@ label {
 
 .panel4 {
   width: calc(28% - 40px);
-  margin-top: -26%;
+  margin-top: -20%;
   border-color: #0e172c;
   border-width: 10px;
   font-family: 'Courier New', monospace;
@@ -114,7 +118,7 @@ label {
   /* margin-top: 10px; */
   background-color: #004643;
   text-align: center;
-  line-height: 200px;
+  line-height: normal;
   color: #fff;
   box-shadow: 0 0 10px #333;
   border-radius: 10px;
@@ -268,6 +272,11 @@ label {
   bottom: 0;
 }
 
+.test{
+  color:white;
+  /* line-height:normal; */
+}
+
 .SubmitButton:hover {
   background-color: darkblue;
 }
@@ -312,5 +321,5 @@ label {
 
 .redtext {
   font-weight: bold ;
-  color: crimson;
+  color: white;
 }

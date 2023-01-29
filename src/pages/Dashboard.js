@@ -142,6 +142,20 @@ function Dashboard() {
         </div>
         <div className="panel4">
         <h6 class='head8'>Suggested Recipes</h6>
+        <ul class="test">
+          <li class="list">4 pound (2kg) whole chicken, at room temperature giblets and neck removed from cavity*</li>
+          <li class="list">1/4 cup unsalted butter, melted</li>
+          <li class="list">3 tablespoons olive oil</li>
+          <li class="list">1/4 cup white wine, (OPTIONAL) -- use a dry wine like a Sauv blanc or Chardonnay</li>
+          <li class="list">1 lemon, halved</li>
+          <li class="list">Salt and freshly ground pepper, to taste</li>
+          <li class="list">2 tablespoons fresh chopped parsley</li>
+          <li class="list">4 garlic cloves, minced</li>
+          <li class="list">1 head of garlic roughly peeled and cut in half horizontally through the middle crosswise</li>
+          <li class="list">3 fresh whole rosemary sprigs</li>
+          <a href="https://cafedelites.com/garlic-herb-butter-roast-chicken/"></a>
+
+        </ul>
         </div>
       </div>
     </div>
